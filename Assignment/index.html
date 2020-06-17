@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      [class*="col-"] {
+        float: left;
+        padding: 15px;
+      }
+
+      html {
+        font-family: "Lucida Sans", sans-serif;
+      }
+
+      /* table css */
+      table {
+        width: 750px;
+        border-collapse: collapse;
+        margin: 10px auto;
+      }
+
+      img {
+        width: 10px;
+      }
+
+      .c1 {
+        color: #ff6600;
+      }
+
+      .c2 {
+        color: #b14802;
+      }
+
+      .c3 {
+        color: #5d2a08;
+      }
+
+      tr:nth-of-type(odd) {
+        background: #f6f6ef;
+      }
+
+      tr:nth-of-type(even) {
+        background: #eaeae6;
+      }
+
+      th {
+        background: #ff6600;
+        color: white;
+        font-weight: 400;
+      }
+
+      td,
+      th {
+        padding: 5px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      td:nth-of-type(4),
+      th:nth-of-type(4) {
+        padding: 5px;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      @media only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px) {
+        table {
+          width: 100%;
+        }
+
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+
+        thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+
+        tr {
+          border: 1px solid #ccc;
+        }
+
+        td {
+          border: none;
+          border-bottom: 1px solid #eee;
+          position: relative;
+          padding-left: 50%;
+        }
+
+        td:before {
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap;
+          /* Label the data */
+          content: attr(data-column);
+
+          color: #000;
+          font-weight: bold;
+        }
+      }
+      /* table css */
+
+      /* For mobile phones: */
+      [class*="col-"] {
+        width: 100%;
+      }
+
+      @media only screen and (min-width: 600px) {
+        /* For tablets: */
+        .col-s-1 {
+          width: 8.33%;
+        }
+        .col-s-2 {
+          width: 16.66%;
+        }
+        .col-s-3 {
+          width: 25%;
+        }
+        .col-s-4 {
+          width: 33.33%;
+        }
+        .col-s-5 {
+          width: 41.66%;
+        }
+        .col-s-6 {
+          width: 50%;
+        }
+        .col-s-7 {
+          width: 58.33%;
+        }
+        .col-s-8 {
+          width: 66.66%;
+        }
+        .col-s-9 {
+          width: 75%;
+        }
+        .col-s-10 {
+          width: 83.33%;
+        }
+        .col-s-11 {
+          width: 91.66%;
+        }
+        .col-s-12 {
+          width: 100%;
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .col-1 {
+          width: 8.33%;
+        }
+        .col-2 {
+          width: 16.66%;
+        }
+        .col-3 {
+          width: 25%;
+        }
+        .col-4 {
+          width: 33.33%;
+        }
+        .col-5 {
+          width: 41.66%;
+        }
+        .col-6 {
+          width: 50%;
+        }
+        .col-7 {
+          width: 58.33%;
+        }
+        .col-8 {
+          width: 66.66%;
+        }
+        .col-9 {
+          width: 75%;
+        }
+        .col-10 {
+          width: 83.33%;
+        }
+        .col-11 {
+          width: 91.66%;
+        }
+        .col-12 {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <table>
+        <thead>
+          <tr>
+            <th data-column="Comments">Comments</th>
+            <th data-column="Vote Count">Vote Count</th>
+            <th data-column="UpVotes">UpVote</th>
+            <th data-column="News Details">News Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-column="Comments">30</td>
+            <td class="c1" data-column="Vote Count">554</td>
+            <td data-column="UpVotes">
+              <img src="images/grayarrow2x.gif" alt="grayarrow2x" />
+            </td>
+            <td data-column="News Details">
+              Functional Programming for Array-Based Parallelism (infoq.com)
+            </td>
+          </tr>
+          <tr>
+            <td data-column="Comments">30</td>
+            <td class="c2" data-column="Vote Count">342</td>
+            <td data-column="UpVotes">
+              <img src="images/grayarrow2x.gif" alt="grayarrow2x" />
+            </td>
+            <td data-column="News Details">News Details</td>
+          </tr>
+          <tr>
+            <td data-column="Comments">30</td>
+            <td class="c3" data-column="Vote Count">343</td>
+            <td data-column="UpVotes">
+              <img src="images/grayarrow2x.gif" alt="grayarrow2x" />
+            </td>
+            <td data-column="News Details">News Details</td>
+          </tr>
+          <tr>
+            <td data-column="Comments">30</td>
+            <td data-column="Vote Count">430</td>
+            <td data-column="UpVotes">
+              <img src="images/grayarrow2x.gif" alt="grayarrow2x" />
+            </td>
+            <td data-column="News Details">News Details</td>
+          </tr>
+          <tr>
+            <td data-column="Comments">30</td>
+            <td class="c2" data-column="Vote Count">490</td>
+            <td data-column="UpVotes">
+              <img src="images/grayarrow2x.gif" alt="grayarrow2x" />
+            </td>
+            <td data-column="News Details">News Details</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <div class="col-3 col-s-3 menu"></div>
+
+      <div class="col-6 col-s-9"></div>
+
+      <div class="col-3 col-s-12"></div>
+    </div>
+  </body>
+</html>
