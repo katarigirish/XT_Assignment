@@ -51,20 +51,20 @@ function App() {
     <main className="container mx-auto p-4">
       <div className="flex flex-col">
         <div className="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-          <div className="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+          <div className="align-middle inline-block min-w-full overflow-hidden border-b border-gray-200">
             <table className="min-w-full">
               <thead>
                 <tr>
-                  <th className="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 bgalter border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium  uppercase tracking-wider">
                     Comments
                   </th>
-                  <th className="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 bgalter border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium  uppercase tracking-wider">
                     Vote Count
                   </th>
-                  <th className="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 bgalter border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium  uppercase tracking-wider">
                     Up Vote
                   </th>
-                  <th className="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 bgalter border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium  uppercase tracking-wider">
                     News Details
                   </th>
                 </tr>
@@ -72,13 +72,13 @@ function App() {
               <tbody className="bg-white">
                 {state?.hits?.map((hit, index) => (
                   <tr key={hit?.objectID ?? index}>
-                    <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                    <td className="px-6 py-4 whitespace-no-wrap bgalter border-gray-200">
                       {hit?.num_comments ?? 0}
                     </td>
-                    <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                    <td className="px-6 py-4 whitespace-no-wrap bgalter border-gray-200">
                       {hit?.points ?? 0}
                     </td>
-                    <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                    <td className="px-6 py-4 whitespace-no-wrap bgalter border-gray-200">
                       <span
                         className="cursor-pointer"
                         onClick={() =>
@@ -88,7 +88,7 @@ function App() {
                         ▲
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
+                    <td className="px-6 py-4 whitespace-no-wrap bgalter border-gray-200 text-sm leading-5 ">
                       {hit?.title ?? ""} {hit?.url ? hit.url : ""} by{" "}
                       {hit?.author ?? ""}{" "}
                       {moment(hit?.created_at ?? Date.now).fromNow()}
@@ -99,8 +99,8 @@ function App() {
             </table>
           </div>
         </div>
-        <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-          <div className="flex-1 flex justify-between">
+        <div className="bg-white px-0 py-3 flex border-t border-gray-200 sm:px-6">
+          <div className="flex-1 flex justify-end">
             <button
               onClick={() =>
                 setPage(page => {

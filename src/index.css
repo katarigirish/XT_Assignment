@@ -1,0 +1,23 @@
+table {
+  border: 0px solid !important;
+}
+
+tr > th {
+  background: #ff6600 !important;
+  color: #fff !important;
+  padding: 2px 5px !important;
+}
+td:first-of-type {
+  text-align: right;
+  padding: 3px 20px;
+}
+
+tr:nth-of-type(odd) .bgalter {
+  background: #f6f6ef;
+  padding: 3px 5px !important;
+}
+
+tr:nth-of-type(even) .bgalter {
+  background: #eaeae6;
+  padding: 3px 5px !important;
+}
