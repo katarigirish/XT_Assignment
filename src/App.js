@@ -48,7 +48,7 @@ function App() {
     return () => (didMount = false);
   }, [page]);
   return (
-    <main className="container mx-auto p-4">
+    <main className="container mx-auto p-0">
       <div className="flex flex-col">
         <div className="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
           <div className="align-middle inline-block min-w-full overflow-hidden border-b border-gray-200">
@@ -99,7 +99,7 @@ function App() {
             </table>
           </div>
         </div>
-        <div className="bg-white px-0 py-3 flex border-t border-gray-200 sm:px-6">
+        <div className="bggray px-0 py-3 flex border-t border-gray-200 sm:px-6">
           <div className="flex-1 flex justify-end">
             <button
               onClick={() =>
@@ -138,7 +138,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="h-64">
+      <div className="h-64 bggray border-top-red">
         <Chart data={data} axes={axes} tooltip />
       </div>
     </main>

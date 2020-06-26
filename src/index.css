@@ -21,3 +21,13 @@ tr:nth-of-type(even) .bgalter {
   background: #eaeae6;
   padding: 3px 5px !important;
 }
+
+.bggray {
+  background: #f6f6ef;
+}
+
+.border-top-red {
+  padding-top: 10px;
+  border-top: 3px solid #ff6600;
+  border-bottom: 3px solid #ff6600;
+}
